@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Combiner Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/global.js" defer></script>
+  <script src="js/combiner.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Combiner Calculator</h1>
+    <button class="toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="refinery.html">Refinery</a>
+    <a href="smelter.html">Smelter</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <label>Input A (e.g. metal): <input id="inputA" type="number" min="0" /></label>
+      <label>Input B (e.g. fuel): <input id="inputB" type="number" min="0" /></label>
+      <label>Recipe A:B Ratio: <input id="ratio" type="text" value="2:1" /></label>
+      <button onclick="calculateCombine()">Calculate</button>
+      <p id="combineResult">Result: </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Don Reagan 2025 | <a href="https://github.com/Ronnie-Reagan/rustCalculator" style="color:var(--accent);">GitHub</a>
+  </footer>
+</body>
+</html>

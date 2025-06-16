@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smelter Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/global.js" defer></script>
+  <script src="js/smelter.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Smelter Calculator</h1>
+    <button class="toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="refinery.html">Refinery</a>
+    <a href="combiner.html">Combiner</a>
+  </nav>
+
+  <main>
+    <div class="tabs">
+      <button class="tab-button active" onclick="switchTab('small')">Small Furnace</button>
+      <button class="tab-button" onclick="switchTab('electric')">Electric Furnace</button>
+    </div>
+
+    <div id="calculator-container" class="card">
+      <label for="material">Select Material:</label>
+      <select id="material"></select><br><br>
+
+      <label for="amount">Amount to Smelt:</label>
+      <input id="amount" type="number" min="1" value="1" /><br><br>
+
+      <button onclick="calculateSmelting()">Calculate</button>
+      <p id="smeltResult">Result: </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Don Reagan 2025 | <a href="https://github.com/Ronnie-Reagan/rustCalculator" style="color:var(--accent);">GitHub</a>
+  </footer>
+</body>
+</html>

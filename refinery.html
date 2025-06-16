@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refinery Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/global.js" defer></script>
+  <script src="js/refinery.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Refinery Calculator</h1>
+    <button class="toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="smelter.html">Smelter</a>
+    <a href="combiner.html">Combiner</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <label>Wood (units): <input id="wood" type="number" min="0" /></label>
+      <label>Crude Oil (units): <input id="oil" type="number" min="0" /></label>
+      <button onclick="calculateRefinery()">Calculate</button>
+      <p id="result">Result: </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Don Reagan 2025 | <a href="https://github.com/Ronnie-Reagan/rustCalculator" style="color:var(--accent);">GitHub</a>
+  </footer>
+</body>
+</html>

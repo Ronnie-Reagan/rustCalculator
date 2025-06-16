@@ -1,0 +1,126 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --card: #f5f5f5;
+  --accent: #0077cc;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eeeeee;
+  --card: #1e1e1e;
+  --accent: #00aaff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background: var(--card);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+main {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type="number"] {
+  width: 100px;
+  margin-left: 0.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  white-space: pre-line;
+}
+
+.toggle {
+  float: right;
+  margin-top: -2rem;
+  margin-right: 1rem;
+}
+
+nav {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+.tabs {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tab-button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--card);
+  border: 1px solid var(--accent);
+  border-bottom: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button:hover:not(.active) {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.tab-button.active {
+  background-color: var(--accent);
+  color: var(--bg);
+  cursor: default;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 119, 204, 0.4);
+}
+
+#calculator-container {
+  border: 1px solid var(--accent);
+  border-radius: 0 10px 10px 10px;
+  padding: 1rem;
+  background: var(--card);
+}
