@@ -26,13 +26,23 @@ let currentRecipes = recipesSmallFurnace;
 
 function formatTime(seconds) {
   seconds = Math.round(seconds);
-  if (seconds >= 60) {
-    const minutes = Math.floor(seconds / 60);
-    const remaining = seconds % 60;
-    return `${minutes}m ${remaining}s`;
-  }
-  return `${seconds}s`;
+
+  const days = Math.floor(seconds / 86400);
+  seconds %= 86400;
+  const hours = Math.floor(seconds / 3600);
+  seconds %= 3600;
+  const minutes = Math.floor(seconds / 60);
+  seconds %= 60;
+
+  const parts = [];
+  if (days > 0) parts.push(`${days}d`);
+  if (hours > 0 || days > 0) parts.push(`${hours}h`);
+  if (minutes > 0 || hours > 0 || days > 0) parts.push(`${minutes}m`);
+  parts.push(`${seconds}s`);
+
+  return parts.join(" ");
 }
+
 
 function populateMaterials() {
   const select = document.getElementById("material");
